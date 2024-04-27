@@ -117,7 +117,7 @@ idle_keys=Keys to NPC's state dictionary (left,right,down,up)
                         elif player.direction=='down':
                             npcs.set_state("Idle_Back")
                         npcs.talked=True
-#Player Cutscene Control
+#Entity Cutscene Control
 def move(entity,state=(),x:int=None,y:int=None,run=False):
     '''Function to have enitity move to a specificied x or y coordinate
 entity=Entity Instance that shall be controlled for the cutscene
