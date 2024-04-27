@@ -94,6 +94,8 @@ class Player(Entity):
         self.control=True
         self.run=False
     def action(self,control,unicode):
+        '''Player controls pass through button (ex: pygame.K_q) for additional actions
+'''
         if self.control:
             if unicode in control.keys():
                 control[unicode]()
@@ -278,7 +280,7 @@ loop format: ((key_1,direction_1),(key_2,direction_2)
             self.timer=0
     def talk(self,dialogue:dict,state=None):
         '''dialogue=dictionary with keys being numbers and the content being a tuple with the list of speakers &dialogues
-dialogue format: {number:([name],[dialogue])}
+dialogue format: {number:([name],[dialogue],[portrait_image],background_image,sfx)}
 state=dict key for NPC state
 '''
         #Check if player is talking to NPC
