@@ -157,3 +157,5 @@ Takes an image and colors it in
 - image=image to be colored in
   - Make sure the image is already pass through pygame.image.load() and the object is colored white
 - color=desired color to fill in
+# License
+The project is licensed under the MIT license.
