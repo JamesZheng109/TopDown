@@ -158,4 +158,4 @@ Takes an image and colors it in
   - Make sure the image is already pass through pygame.image.load() and the object is colored white
 - color=desired color to fill in
 # License
-The project is licensed under the MIT license.
+All files excluding Spritesheet_class.py are licensed under the MIT license.
