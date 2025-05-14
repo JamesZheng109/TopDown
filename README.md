@@ -1,6 +1,6 @@
 # Character_Top_Down.py
 # License
-All files excluding Spritesheet_class.py are licensed under the MIT license. [Christian037](https://github.com/ChristianD37) has authorized the use of the code in Spritesheet_class.py to anyone.
+All files excluding Spritesheet_class.py are licensed under the MIT license. [Christian037](https://github.com/ChristianD37) has authorized the use of the code in [Spritesheet_class.py](https://github.com/ChristianD37/YoutubeTutorials/blob/master/Animation/spritesheet.py) to anyone.
 ## Entity()
 Make Entity object
 ## Paramters for Entity.__init__()
