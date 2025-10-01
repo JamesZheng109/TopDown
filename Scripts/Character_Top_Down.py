@@ -283,18 +283,20 @@ loop format: ((key_1,direction_1),(key_2,direction_2)
 dialogue format: {number:([name],[dialogue],[portrait_image],background_image,sfx)}
 state=dict key for NPC state
 '''
-        #Check if player is talking to NPC
+       #Check if player is talking to NPC
         if self.talked:
+            #Makes sure self.dialoue does not exceed key number
+            if self.dialogue>=len(dialogue.keys()):
+                self.dialogue=0
             #Loop through dictionary and output dialogue based on dialogue number matching dictionary key
             textwrapper(self.screen,speaker=dialogue[self.dialogue][0],dialogue=dialogue[self.dialogue][1],image=dialogue[self.dialogue][2],
                         background=dialogue[self.dialogue][3],sound=dialogue[self.dialogue][4])
             self.talked=False
             if state!=None:
                 self.set_state(state)
-            #Makes sure self.dialoue does not exceed key number
-            if self.dialogue==max(dialogue.keys()):
-                self.dialogue=0
-            elif self.dialogue!=max(dialogue.keys()):
+            #Increments dialogue counter
+            if self.dialogue!=len(dialogue.keys()):
                 self.dialogue+=1
         
 if __name__=="__main__":pass
+
