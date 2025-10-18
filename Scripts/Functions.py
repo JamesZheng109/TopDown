@@ -150,16 +150,6 @@ run=flag to run or not'''
             entity.y+=move*move_multiplier
         elif entity.y==y:
             entity.set_state(state[1])
-#Same Image Different Color
-def color_object(imagefile,color):
-    '''Takes an image and colors it in
-    image=image to be colored in
-    color=desired color to fill in'''
-    colored=pygame.Surface(imagefile.get_size())
-    colored.fill(color)
-    result=imagefile.copy()
-    result.blit(colored,(0,0),special_flags=pygame.BLEND_MULT)
-    return result,imagefile.get_size()
 #Rotation
 def spin(screen,image,angle,x,y):
     '''screen=window to display on
@@ -172,4 +162,5 @@ y=y coordinate
     screen.blit(rect,(x-int(rect.get_width()/2),y-int(rect.get_height()/2)))
     if angle>=360:
         angle=0
+
 
