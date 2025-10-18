@@ -160,9 +160,9 @@ Takes an image and colors it in
 - image=image to be colored in
   - Make sure the image is already pass through pygame.image.load() and the object is colored white
 - color=desired color to fill in
-## greyscale
+## greyscale()
 Recolors image in a greyscale
 - image=pygame image to be colored in
-## blackenimage
+## blacken_image()
 Recolors image entirely black
 - image=pygame image object
