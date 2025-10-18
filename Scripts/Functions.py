@@ -160,5 +160,16 @@ def color_object(imagefile,color):
     result=imagefile.copy()
     result.blit(colored,(0,0),special_flags=pygame.BLEND_MULT)
     return result,imagefile.get_size()
-if __name__=='__main__':
-    pass
+#Rotation
+def spin(screen,image,angle,x,y):
+    '''screen=window to display on
+image=image that will be rotated
+angle=how much to rotate the image
+x=x coordinate
+y=y coordinate
+'''
+    rect=pygame.transform.flip(pygame.transform.rotate(image,angle),True,False)
+    screen.blit(rect,(x-int(rect.get_width()/2),y-int(rect.get_height()/2)))
+    if angle>=360:
+        angle=0
+
