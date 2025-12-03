@@ -34,7 +34,7 @@ text_color=color text will be'''
         ##Button info
         Box=pygame.Rect((0,0),(self.width,self.height))
         ##Button display
-        Box_display=pygame.draw.rect(self.surface,(self.box_color),Box)
+        pygame.draw.rect(self.surface,(self.box_color),Box)
         ##Display Text
         self.surface.blit(self.textrender,(int(self.width/2)-int(self.textrender.get_width()/2),int(self.height/2)-int(self.textrender.get_height()/2)))
         #Mouse detection
@@ -49,4 +49,5 @@ text_color=color text will be'''
         self.y=Display_H+1
         self.width=0
         self.height=0
+
 
