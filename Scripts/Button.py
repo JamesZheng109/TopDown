@@ -2,7 +2,7 @@
 import pygame
 pygame.init()
 class button():
-    def __init__ (self,window,box_color,x:int,y:int,width:int,height:int,text:str,text_color):
+    def __init__ (self,window,box_color,x:int,y:int,width:int,height:int,text:str,text_color,alpha=255):
         '''Make a button using Rect
 window=pass variable used to make pygame window
 box_color=color the button will be
@@ -26,7 +26,8 @@ text_color=color text will be'''
         self.textfont=pygame.font.SysFont('timesnewroman',50)
         self.textrender=self.textfont.render(self.text,False,self.text_color)
         #Surface
-        self.surface=pygame.Surface((self.width,self.height),pygame.SRCALPHA) 
+        self.surface=pygame.Surface((self.width,self.height),pygame.SRCALPHA)
+        self.surface.set_alpha(alpha)
     def draw(self,act):
         '''Draws button instance onto window'''
         self.window.blit(self.surface,(self.x,self.y))
@@ -48,3 +49,4 @@ text_color=color text will be'''
         self.y=Display_H+1
         self.width=0
         self.height=0
+
